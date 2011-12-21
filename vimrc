@@ -53,6 +53,10 @@ set smartcase
 set guifont=Inconsolata:h12:cANSI
 colorscheme koehler
 
+"" tmp and backup files
+set backupdir=$HOME/vimfiles/backup
+set directory=$HOME/vimfiles/tmp
+
 "" Pathogen
 call pathogen#infect()
 
