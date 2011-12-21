@@ -16,7 +16,7 @@ curl -so ~/vimfiles/autoload/pathogen.vim \
 cd ~/vimfiles/bundle
 git clone git://github.com/scrooloose/nerdtree.git
 git clone git clone https://github.com/tomtom/tlib_vim.git
-git clone https://github.com/tomtom/tlib_vim.git
-git clone https://github.com/MarcWeber/vim-addon-mw-utils.git
+git clone git://github.com/tomtom/tlib_vim.git
+git clone git://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone git://github.com/garbas/vim-snipmate.git
-git clone https://github.com/honza/snipmate-snippets.gi
+git clone https://github.com/honza/snipmate-snippets.git
