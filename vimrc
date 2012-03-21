@@ -5,6 +5,14 @@ set encoding=utf-8
 set showcmd
 filetype plugin indent on
 
+if has("autocmd")
+  " Restore cursor position
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+endif
+
 "" Line nos
 set number
 set pastetoggle=<F5>
