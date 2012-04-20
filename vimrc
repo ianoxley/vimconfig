@@ -1,4 +1,6 @@
 set nocompatible
+set modelines=0
+
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
@@ -44,12 +46,21 @@ endif
 "" Line nos
 set number
 set pastetoggle=<F5>
+set relativenumber
+
+set undofile
 
 "" Whitespace
-set nowrap
+set wrap
 set tabstop=2 shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+set wildmenu
+set wildmode=list:longest
 
 "" Search options
 set hlsearch
