@@ -35,6 +35,8 @@ set encoding=utf-8
 set showcmd
 filetype plugin indent on
 
+let mapleader = ","
+
 if has("autocmd")
   " Restore cursor position
   autocmd BufReadPost *
@@ -67,7 +69,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-
+nnoremap <leader><space> :noh<cr>
 "" Font and colours
 set guifont=Inconsolata:h12:cANSI
 colorscheme koehler
