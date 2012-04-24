@@ -36,6 +36,7 @@ set showcmd
 filetype plugin indent on
 
 let mapleader = ","
+:let maplocalleader = ","
 
 if has("autocmd")
   " Restore cursor position
