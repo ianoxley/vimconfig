@@ -47,9 +47,10 @@ nnoremap <leader><space> :noh<cr>
 set guifont=Monaco:h14
 colorscheme koehler
 
-"" tmp and backup files
+"" tmp, backup, and undo files
 set backupdir=~/.vim/tmp//
 set directory=~/.vim/tmp//
+set undodir=~/.vim/undo//
 
 "" Pathogen
 call pathogen#infect()
