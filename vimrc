@@ -5,6 +5,9 @@ set encoding=utf-8
 set showcmd
 filetype plugin indent on
 
+let mapleader = ","
+:let maplocalleader = ","
+
 if has("autocmd")
   " Restore cursor position
   autocmd BufReadPost *
@@ -16,18 +19,29 @@ endif
 "" Line nos
 set number
 set pastetoggle=<F5>
+set relativenumber
+
+set undofile
 
 "" Whitespace
-set nowrap
+set wrap
 set tabstop=2 shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
+set textwidth=79
+set formatoptions=qrn1
+set colorcolumn=85
+
+set wildmenu
+set wildmode=list:longest
 
 "" Search options
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+nnoremap <leader><space> :noh<cr>
 
 "" Font and colours
 set guifont=Monaco:h14
@@ -45,3 +59,8 @@ map <F2> :NERDTreeToggle<CR>
 
 "" Enable word wrapping in a single command a la http://vimcasts.org/episodes/soft-wrapping-text/
 command! -nargs=* Wrap set wrap linebreak nolist
+
+"" Open todo.txt files in todo mode
+au BufRead,BufNewFile todo.txt set filetype=xml
+au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.less set filetype=css

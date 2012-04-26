@@ -8,15 +8,17 @@
 # TODO set this via env var
 
 # From https://github.com/tpope/vim-pathogen with .vim replaced with vimfiles
-mkdir -p ~/vimfiles/autoload ~/vimfiles/bundle; \
-curl -so ~/vimfiles/autoload/pathogen.vim \
+mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+curl -so ~/.vim/autoload/pathogen.vim \
     https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 
 # Install some plugins
-cd ~/vimfiles/bundle
+cd ~/.vim/bundle
 git clone git://github.com/scrooloose/nerdtree.git
 git clone git clone https://github.com/tomtom/tlib_vim.git
 git clone git://github.com/tomtom/tlib_vim.git
 git clone git://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone git://github.com/garbas/vim-snipmate.git
-git clone https://github.com/honza/snipmate-snippets.git
+git clone git@github.com:ianoxley/snipmate-snippets.git 
+git clone git://github.com/vimoutliner/vimoutliner.git
+git clone git://github.com/mivok/vimtodo.git
