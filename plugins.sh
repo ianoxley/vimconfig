@@ -22,4 +22,4 @@ git clone git://github.com/garbas/vim-snipmate.git
 git clone https://github.com/honza/snipmate-snippets.git
 git clone git://github.com/vimoutliner/vimoutliner.git
 git clone git://github.com/mivok/vimtodo.git
-
+git svn clone http://web-indent.googlecode.com/svn/trunk/ web-indent
