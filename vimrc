@@ -72,7 +72,7 @@ set ignorecase
 set smartcase
 nnoremap <leader><space> :noh<cr>
 "" Font and colours
-set guifont=Inconsolata:h12:cANSI
+set guifont=Ubuntu Mono:h12:cANSI
 colorscheme koehler
 
 "" tmp and backup files
