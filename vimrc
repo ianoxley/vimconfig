@@ -78,6 +78,7 @@ colorscheme koehler
 "" tmp and backup files
 set backupdir=~/.vim/tmp//
 set directory=~/.vim/tmp//
+set undodir=~/.vim/tmp//
 
 "" Pathogen
 call pathogen#infect()
