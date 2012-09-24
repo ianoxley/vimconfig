@@ -19,7 +19,7 @@ endif
 "" Line nos
 set number
 set pastetoggle=<F5>
-set relativenumber
+"" set relativenumber
 
 set undofile
 
@@ -57,6 +57,9 @@ call pathogen#infect()
 
 "" NERDTree
 map <F2> :NERDTreeToggle<CR>
+
+"" Custom keybindings
+inoremap jk <Esc>
 
 "" Enable word wrapping in a single command a la http://vimcasts.org/episodes/soft-wrapping-text/
 command! -nargs=* Wrap set wrap linebreak nolist
