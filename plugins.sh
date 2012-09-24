@@ -19,8 +19,7 @@ git clone git://github.com/scrooloose/nerdtree.git
 git clone git://github.com/tomtom/tlib_vim.git
 git clone git://github.com/MarcWeber/vim-addon-mw-utils.git
 git clone git://github.com/garbas/vim-snipmate.git
-git clone https://github.com/honza/snipmate-snippets.git
+git clone git@github.com:ianoxley/snipmate-snippets.git 
 git clone git://github.com/vimoutliner/vimoutliner.git
 git clone git://github.com/mivok/vimtodo.git
-git svn clone http://web-indent.googlecode.com/svn/trunk/ web-indent
-git clone git://github.com/PProvost/vim-ps1.git
+git clone https://github.com/pangloss/vim-javascript.git
