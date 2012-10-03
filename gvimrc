@@ -12,3 +12,6 @@ elseif has("gui_running")
     endif
 endif
 
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
