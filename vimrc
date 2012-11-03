@@ -61,6 +61,9 @@ map <F2> :NERDTreeToggle<CR>
 "" Custom keybindings
 inoremap jk <Esc>
 
+"" less -> css
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
 "" Enable word wrapping in a single command a la http://vimcasts.org/episodes/soft-wrapping-text/
 command! -nargs=* Wrap set wrap linebreak nolist
 

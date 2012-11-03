@@ -24,3 +24,4 @@ git clone git://github.com/vimoutliner/vimoutliner.git
 git clone git://github.com/mivok/vimtodo.git
 git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/walm/jshint.vim.git
+git clone git://github.com/groenewege/vim-less.git
