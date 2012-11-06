@@ -48,6 +48,9 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 "" Reselect text after paste
 nnoremap <leader>v V`]
+"" Underline with = or -
+nnoremap <leader>1 yypVr=
+nnoremap <leader>2 yypVr=
 
 "" Font and colours
 set guifont=Monaco:h14
