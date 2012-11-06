@@ -70,6 +70,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+"" Disable search highlighting
 nnoremap <leader><space> :noh<cr>
 "" Font and colours
 "" default font set in _gvimrc file
@@ -80,6 +81,12 @@ colorscheme koehler
 set backupdir=~/.vim/tmp//
 set directory=~/.vim/tmp//
 set undodir=~/.vim/tmp//
+
+"" leader mappings from http://stevelosh.com/blog/2010/09/coming-home-to-vim/#using-the-leader
+"" Sort CSS selectors
+nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+"" Reselect text after paste
+nnoremap <leader>v V`]
 
 "" Pathogen
 call pathogen#infect()
