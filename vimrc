@@ -1,4 +1,4 @@
-﻿﻿set nocompatible
+﻿set nocompatible
 
 syntax enable
 set encoding=utf-8
@@ -82,6 +82,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.less set filetype=css
 
 "" Python settings from http://www.jedberg.net/jedberg_vimrc
+
 ""
 "" Python specific settings
 ""
