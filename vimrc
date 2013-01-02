@@ -1,4 +1,4 @@
-﻿set nocompatible
+﻿﻿set nocompatible
 
 syntax enable
 set encoding=utf-8
@@ -80,3 +80,49 @@ command! -nargs=* Wrap set wrap linebreak nolist
 au BufRead,BufNewFile todo.txt set filetype=xml
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.less set filetype=css
+
+"" Python settings from http://www.jedberg.net/jedberg_vimrc
+""
+"" Python specific settings
+""
+
+" Full Python syntax highlighting, when combined with 'syntax on' above
+let python_highlight_all=1
+
+" Number of spaces that a pre-existing tab is equal to.
+" For the amount of space used for a new tab use shiftwidth.
+au BufRead,BufNewFile *py set tabstop=4
+
+" What to use for an indent.
+" This will affect Ctrl-T and 'autoindent'.
+" Python: 4 spaces
+au BufRead,BufNewFile *.py set shiftwidth=4
+au BufRead,BufNewFile *.py set expandtab
+
+" Make backspacing easier
+au BufRead,BufNewFile *.py set softtabstop=4
+
+" Use the below highlight group when displaying bad whitespace is desired.
+highlight BadWhitespace ctermbg=red guibg=red
+
+" Display tabs at the beginning of a line in Python mode as bad.
+au BufRead,BufNewFile *.py match BadWhitespace /^\t\+/
+" Make trailing whitespace be flagged as bad.
+au BufRead,BufNewFile *.py match BadWhitespace /\s\+$/
+
+" Wrap text after a certain number of characters
+au BufRead,BufNewFile *.py set textwidth=79
+
+" Use UNIX (\n) line endings.
+au BufRead,BufNewFile *.py set fileformat=unix
+
+" The following line sets the smartindent mode for *.py files. It means that
+" after typing lines which start with any of the keywords in the list (ie.
+" def, class, if, etc) the next line will automatically indent itself to the
+" next level of indentation:
+au BufRead,BufNewFile *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
+
+" Remove any extra whitespace from the ends of lines when saving a file
+autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
+
+
