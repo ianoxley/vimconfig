@@ -26,3 +26,4 @@ git clone https://github.com/pangloss/vim-javascript.git
 git clone https://github.com/walm/jshint.vim.git
 git clone git://github.com/groenewege/vim-less.git
 git clone git://github.com/kchmck/vim-coffee-script.git 
+git clone git://github.com/xolox/vim-shell.git
