@@ -19,7 +19,7 @@ endif
 "" Line nos
 set number
 set pastetoggle=<F5>
-"" set relativenumber
+set relativenumber
 
 set undofile
 
@@ -50,10 +50,10 @@ nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 nnoremap <leader>v V`]
 "" Underline with = or -
 nnoremap <leader>1 yypVr=
-nnoremap <leader>2 yypVr=
+nnoremap <leader>2 yypVr-
 
 "" Font and colours
-set guifont=Monaco:h14
+set guifont=Inconsolata:h14
 colorscheme koehler
 
 "" tmp, backup, and undo files
