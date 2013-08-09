@@ -18,8 +18,7 @@ git clone git://github.com/scrooloose/nerdtree.git
 git clone git clone https://github.com/tomtom/tlib_vim.git
 git clone git://github.com/tomtom/tlib_vim.git
 git clone git://github.com/MarcWeber/vim-addon-mw-utils.git
-git clone git://github.com/garbas/vim-snipmate.git
-git clone git@github.com:ianoxley/snipmate-snippets.git 
+git clone git@github.com:ianoxley/ultisnips.git
 git clone git://github.com/vimoutliner/vimoutliner.git
 git clone git://github.com/mivok/vimtodo.git
 git clone https://github.com/pangloss/vim-javascript.git
@@ -27,3 +26,4 @@ git clone https://github.com/walm/jshint.vim.git
 git clone git://github.com/groenewege/vim-less.git
 git clone git://github.com/kchmck/vim-coffee-script.git 
 git clone git://github.com/aaronbieber/quicktask.git
+git clone https://github.com/duff/vim-scratch.git
