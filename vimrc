@@ -17,7 +17,7 @@ if has("autocmd")
 endif
 
 "" Line nos
-set number
+"" set number turn off if using relativenumber
 set pastetoggle=<F5>
 set relativenumber
 
