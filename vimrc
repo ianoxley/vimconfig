@@ -53,7 +53,7 @@ nnoremap <leader>1 yypVr=
 nnoremap <leader>2 yypVr-
 
 "" Font and colours
-set guifont=Inconsolata:h14
+set guifont=Inconsolata:h16
 colorscheme koehler
 
 "" tmp, backup, and undo files
