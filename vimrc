@@ -20,6 +20,7 @@ endif
 "" set number turn off if using relativenumber
 set pastetoggle=<F5>
 set relativenumber
+set number
 
 set undofile
 
