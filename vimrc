@@ -55,7 +55,7 @@ nnoremap <leader>2 yypVr-
 
 "" Font and colours
 set guifont=Inconsolata:h14
-colorscheme koehler
+colorscheme torte
 
 "" tmp, backup, and undo files
 set backupdir=~/.vim/tmp//
