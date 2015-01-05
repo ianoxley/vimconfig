@@ -58,9 +58,9 @@ set guifont=Inconsolata:h14
 colorscheme torte
 
 "" tmp, backup, and undo files
-set backupdir=~/.vim/tmp//
-set directory=~/.vim/tmp//
-set undodir=~/.vim/undo//
+set backupdir=~/vimfiles/tmp//
+set directory=~/vimfiles/tmp//
+set undodir=~/vimfiles/undo//
 
 "" Pathogen
 call pathogen#infect()
@@ -81,6 +81,9 @@ command! -nargs=* Wrap set wrap linebreak nolist
 au BufRead,BufNewFile todo.txt set filetype=xml
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.less set filetype=css
+
+"" Open .config files as XML
+au BufRead,BufNewFile *.config set filetype=xml
 
 "" Python settings from http://www.jedberg.net/jedberg_vimrc
 
