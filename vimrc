@@ -54,7 +54,7 @@ nnoremap <leader>1 yypVr=
 nnoremap <leader>2 yypVr-
 
 "" Font and colours
-set guifont=Inconsolata:h14
+set guifont=Anonymous\ Pro:h14
 colorscheme torte
 
 "" tmp, backup, and undo files
@@ -70,6 +70,9 @@ map <F2> :NERDTreeToggle<CR>
 
 "" Custom keybindings
 inoremap jk <Esc>
+
+"" Find / replace the word under the cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>/
 
 "" less -> css
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
@@ -130,4 +133,6 @@ au BufRead,BufNewFile *.py set smartindent cinwords=if,elif,else,for,while,try,e
 " Remove any extra whitespace from the ends of lines when saving a file
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
+" Expression register
+imap <C-i>u <C-r>=system(expand('~/vimconfig/scripts/insert_uuid.py'))<cr>
 
