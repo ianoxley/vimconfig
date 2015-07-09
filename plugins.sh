@@ -24,3 +24,5 @@ git clone git://github.com/kchmck/vim-coffee-script.git
 git clone https://github.com/duff/vim-scratch.git
 git clone https://github.com/mattn/emmet-vim.git
 git clone https://github.com/tpope/vim-surround.git
+git clone https://github.com/vimwiki/vimwiki.git
+git clone https://github.com/mxw/vim-jsx.git
