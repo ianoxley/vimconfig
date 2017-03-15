@@ -22,11 +22,10 @@ set pastetoggle=<F5>
 set relativenumber
 set number
 
-set undofile
 
 "" Whitespace
 set wrap
-set tabstop=4 shiftwidth=4
+set tabstop=2 shiftwidth=2
 set expandtab
 set backspace=indent,eol,start
 set textwidth=79
@@ -54,16 +53,20 @@ nnoremap <leader>1 yypVr=
 nnoremap <leader>2 yypVr-
 
 "" Font and colours
-set guifont=Anonymous\ Pro:h14
-colorscheme torte
+set guifont=Anonymous\ Pro:h16
+colorscheme afterglow
 
 "" tmp, backup, and undo files
-set backupdir=~/vimfiles/tmp//
-set directory=~/vimfiles/tmp//
-set undodir=~/vimfiles/undo//
+set backupdir=~/.vim/tmp
+set directory=~/.vim/tmp
+set undodir=~/.vim/undo
+set undofile
+
+set laststatus=2
+set statusline=%f "tail of the filename
 
 "" Pathogen
-call pathogen#infect()
+execute pathogen#infect()
 
 "" NERDTree
 map <F2> :NERDTreeToggle<CR>
