@@ -65,6 +65,9 @@ set undofile
 set laststatus=2
 set statusline=%f "tail of the filename
 
+"" use my bash login profile when using :shell
+set shell=bash\ -l
+
 "" Pathogen
 execute pathogen#infect()
 
