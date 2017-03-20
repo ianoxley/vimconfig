@@ -61,6 +61,7 @@ set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
 set undodir=~/.vim/undo
 set undofile
+set undolevels=1000
 
 set laststatus=2
 set statusline=%f "tail of the filename
