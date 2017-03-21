@@ -22,3 +22,4 @@ git clone https://github.com/mattn/emmet-vim.git
 git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/mxw/vim-jsx.git
 git clone git@github.com:blindFS/vim-taskwarrior.git
+git clone git@github.com:jiangmiao/auto-pairs.git
