@@ -69,6 +69,8 @@ set statusline=%f "tail of the filename
 "" use my bash login profile when using :shell
 set shell=bash\ -l
 
+set mouse=a
+
 "" Pathogen
 execute pathogen#infect()
 
