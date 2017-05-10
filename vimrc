@@ -145,3 +145,13 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 " Expression register
 imap <C-i>u <C-r>=system(expand('~/vimconfig/scripts/insert_uuid.py'))<cr>
 
+" Git commit messages
+au FileType gitcommit set tw=79
+
+" done.log tracking (see https://betterhumans.coach.me/this-alternative-todo-list-will-help-you-complete-100-tasks-every-day-aae1130faac8)
+" check off a todo item and time stamp it
+map <leader>x ^rx: <Esc>:r! date +" [\%H:\%M]"<ENTER>kJA<Esc>$
+" create a new todo item
+map <leader>t o  _ 
+
+inoremap <F5> <C-R>=strftime('%Y-%m-%d')<CR>
