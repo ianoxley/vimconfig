@@ -64,7 +64,7 @@ set undofile
 set undolevels=1000
 
 set laststatus=2
-set statusline=%f "tail of the filename
+set statusline=%{fugitive#statusline()}\ %f\ (%p%%) "tail of the filename
 
 "" use my bash login profile when using :shell
 set shell=bash\ -l
@@ -155,3 +155,4 @@ map <leader>x ^rx: <Esc>:r! date +" [\%H:\%M]"<ENTER>kJA<Esc>$
 map <leader>t o  _ 
 
 inoremap <F5> <C-R>=strftime('%Y-%m-%d')<CR>
+
