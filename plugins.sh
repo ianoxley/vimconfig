@@ -23,3 +23,6 @@ git clone https://github.com/tpope/vim-surround.git
 git clone https://github.com/mxw/vim-jsx.git
 git clone git@github.com:blindFS/vim-taskwarrior.git
 git clone git@github.com:jiangmiao/auto-pairs.git
+git clone git@github.com:terryma/vim-expand-region.git
+git clone git://github.com/tpope/vim-fugitive.git
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
