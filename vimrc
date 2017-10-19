@@ -146,13 +146,7 @@ autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 imap <C-i>u <C-r>=system(expand('~/vimconfig/scripts/insert_uuid.py'))<cr>
 
 " Git commit messages
-au FileType gitcommit set tw=79
-
-" done.log tracking (see https://betterhumans.coach.me/this-alternative-todo-list-will-help-you-complete-100-tasks-every-day-aae1130faac8)
-" check off a todo item and time stamp it
-map <leader>x ^rx: <Esc>:r! date +" [\%H:\%M]"<ENTER>kJA<Esc>$
-" create a new todo item
-map <leader>t o  _ 
+au FileType gitcommit setlocal spell tw=72
 
 inoremap <F5> <C-R>=strftime('%Y-%m-%d')<CR>
 
@@ -173,3 +167,6 @@ let g:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['javascript'],'passive_filetypes': [] }
 nnoremap <leader>e :SyntasticToggleMode<CR>
 
+" Taskwiki
+let g:taskwiki_use_python2=1
+let g:taskwiki_data_location="~/.task"
