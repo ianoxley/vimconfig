@@ -31,3 +31,4 @@ git clone https://github.com/freitass/todo.txt-vim.git
 git clone git@github.com:tpope/vim-endwise.git
 git clone git@github.com:junegunn/fzf.vim.git
 git clone git@github.com:mileszs/ack.vim.git
+git clone https://github.com/w0rp/ale.git

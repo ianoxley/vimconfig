@@ -150,23 +150,21 @@ au FileType gitcommit setlocal spell tw=72
 
 inoremap <F5> <C-R>=strftime('%Y-%m-%d')<CR>
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-" let g:syntastic_javascript_eslint_exe = 'npm run lint --'
-let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
-let g:syntastic_javascript_eslint_exec = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['javascript'],'passive_filetypes': [] }
-nnoremap <leader>e :SyntasticToggleMode<CR>
+" ALE settings
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
 
 " Taskwiki
 let g:taskwiki_use_python2=1
 let g:taskwiki_data_location="~/.task"
+
+" fzf
+set rtp+=/usr/local/opt/fzf
+set tags+=./.git/tags
+nmap <leader>r :Buffers<CR>
+nmap <leader>f :Files<CR>
+nmap <leader>t :Tags<CR>
