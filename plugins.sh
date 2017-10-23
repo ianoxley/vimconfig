@@ -33,3 +33,4 @@ git clone git@github.com:junegunn/fzf.vim.git
 git clone git@github.com:mileszs/ack.vim.git
 git clone https://github.com/w0rp/ale.git
 git clone https://github.com/itchyny/lightline.vim
+git clone git@github.com:junegunn/goyo.vim.git
