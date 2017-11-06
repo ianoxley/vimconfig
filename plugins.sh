@@ -34,3 +34,7 @@ git clone git@github.com:mileszs/ack.vim.git
 git clone https://github.com/w0rp/ale.git
 git clone https://github.com/itchyny/lightline.vim
 git clone git@github.com:junegunn/goyo.vim.git
+git clone git@github.com:maximbaz/lightline-ale.git
+
+# Colour schemes
+git clone git@github.com:altercation/vim-colors-solarized.git
