@@ -67,7 +67,7 @@ set laststatus=2
 set statusline=%{fugitive#statusline()}\ %f\ (%p%%) "tail of the filename
 
 "" use my bash login profile when using :shell
-set shell=bash\ -l
+set shell=/usr/local/bin/zsh
 
 set mouse=a
 
@@ -76,6 +76,7 @@ execute pathogen#infect()
 
 "" NERDTree
 map <F2> :NERDTreeToggle<CR>
+map <F3> :NERDTreeFind<CR>
 
 "" Custom keybindings
 inoremap jk <Esc>
