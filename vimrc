@@ -1,6 +1,6 @@
 ﻿set nocompatible
 
-syntax enable
+syntax on
 set encoding=utf-8
 set showcmd
 filetype plugin indent on
@@ -14,6 +14,10 @@ if has("autocmd")
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+endif
+
+if !has('gui_running')
+  set t_Co=256
 endif
 
 "" Line nos
@@ -64,7 +68,7 @@ set undofile
 set undolevels=1000
 
 set laststatus=2
-set statusline=%{fugitive#statusline()}\ %f\ (%p%%) "tail of the filename
+" set statusline=%{fugitive#statusline()}\ %f\ (%p%%) "tail of the filename
 
 "" use my bash login profile when using :shell
 set shell=/usr/local/bin/zsh
@@ -83,9 +87,6 @@ inoremap jk <Esc>
 
 "" Find / replace the word under the cursor
 nnoremap <leader>s :%s/\<<C-r><C-w>\>/
-
-"" less -> css
-nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
 "" Enable word wrapping in a single command a la http://vimcasts.org/episodes/soft-wrapping-text/
 command! -nargs=* Wrap set wrap linebreak nolist
@@ -149,7 +150,9 @@ imap <C-i>u <C-r>=system(expand('~/vimconfig/scripts/insert_uuid.py'))<cr>
 " Git commit messages
 au FileType gitcommit setlocal spell tw=72
 
+" Insert date and / or time
 inoremap <F5> <C-R>=strftime('%Y-%m-%d')<CR>
+inoremap <C-i>t <C-R>=strftime('%H:%M')<CR>
 
 " ALE settings
 let g:ale_linters = {
@@ -210,35 +213,37 @@ endfunction
 " No need to show the mode as it is shown via lightline
 set noshowmode
 
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'wombat',
+"       \ 'active': {
+"       \   'left': [ [ 'mode', 'paste' ],
+"       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+"       \ },
+"       \ 'component_function': {
+"       \   'gitbranch': 'fugitive#statusline'
+"       \ },
+"       \ }
+
+let g:lightline = {}
+let g:lightline.colorscheme = 'wombat'
 
 let g:lightline.component_expand = {
+      \  'linter_checking': 'lightline#ale#checking',
       \  'linter_warnings': 'lightline#ale#warnings',
       \  'linter_errors': 'lightline#ale#errors',
       \  'linter_ok': 'lightline#ale#ok',
       \ }
 
 let g:lightline.component_type = {
+      \     'linter_checking': 'left',
       \     'linter_warnings': 'warning',
       \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
       \ }
 
-let g:lightline.active = { 'right': [[ 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
 
 let g:ale_set_highlights = 0
-
-" Taskwiki
-let g:taskwiki_use_python2=1
-let g:taskwiki_data_location="~/.task"
 
 " fzf
 set rtp+=/usr/local/opt/fzf
@@ -246,3 +251,7 @@ set tags+=./.git/tags
 nmap <leader>r :Buffers<CR>
 nmap <leader>f :Files<CR>
 nmap <leader>t :Tags<CR>
+
+" matchit
+runtime macros/matchit.vim
+
