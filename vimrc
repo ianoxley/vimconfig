@@ -34,7 +34,7 @@ set expandtab
 set backspace=indent,eol,start
 set textwidth=79
 set formatoptions=qrn1
-set colorcolumn=85
+set colorcolumn=120
 
 set wildmenu
 set wildmode=list:longest
@@ -152,7 +152,7 @@ au FileType gitcommit setlocal spell tw=72
 
 " Insert date and / or time
 inoremap <F5> <C-R>=strftime('%Y-%m-%d')<CR>
-inoremap <C-i>t <C-R>=strftime('%H:%M')<CR>
+inoremap <C-i>t <C-R>=strftime('%H:%Mn')<CR>
 
 " ALE settings
 let g:ale_linters = {
@@ -241,7 +241,23 @@ let g:lightline.component_type = {
       \     'linter_ok': 'left',
       \ }
 
-let g:lightline.active = { 'right': [[ 'linter_checking', 'linter_errors', 'linter_warnings', 'linter_ok' ]] }
+let g:lightline.component_function = {
+      \     'gitbranch': 'fugitive#head'
+      \ }
+
+let g:lightline.active = { 'right': [
+      \   [
+      \     'linter_checking',
+      \     'linter_errors',
+      \     'linter_warnings',
+      \     'linter_ok'
+      \   ],
+      \   [ 'lineinfo' ],
+      \   [ 'percent' ],
+      \   [ 'fileformat', 'fileencoding', 'filetype' ]]
+      \ }
+
+let g:lightline.active.left = [[ 'mode', 'paste' ], [ 'gitbranch', 'readonly', 'filename', 'modified' ]]
 
 let g:ale_set_highlights = 0
 
