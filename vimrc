@@ -164,7 +164,6 @@ inoremap <C-i>t <C-R>=strftime('%H:%Mn')<CR>
 
 " ALE settings
 let g:ale_linters = {
-\   'cs': ['OmniSharp'],
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
 \}
