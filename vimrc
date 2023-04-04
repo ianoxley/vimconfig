@@ -168,6 +168,8 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
 \}
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
 " let g:ale_set_loclist = 0
 " let g:ale_set_quickfix = 1
 " This is regular lightline configuration, we just added 
