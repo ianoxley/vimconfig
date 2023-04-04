@@ -65,7 +65,8 @@ nnoremap <leader>2 yypVr-
 
 "" Font and colours
 set guifont=Anonymous\ Pro:h16
-colorscheme afterglow
+set background=dark
+colorscheme solarized8
 
 "" tmp, backup, and undo files
 set backupdir=~/.vim/tmp
