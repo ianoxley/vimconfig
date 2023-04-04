@@ -277,6 +277,12 @@ set tags+=./.git/tags
 nmap <leader>r :Buffers<CR>
 nmap <leader>f :Files<CR>
 nmap <leader>t :Tags<CR>
+nmap <leader>g :GFiles?<CR>
+nmap <leader>c :Commits<CR>
+
+" Preview window on the upper side of the window with 40% height,
+" hidden by default, ctrl-/ to toggle
+let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
 
 " matchit
 runtime macros/matchit.vim
