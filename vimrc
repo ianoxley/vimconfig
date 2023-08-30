@@ -88,6 +88,7 @@ execute pathogen#infect()
 "" NERDTree
 map <F2> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFind<CR>
+let NERDTreeIgnore=['\.tags$', '^tags$[[file]]', '\~$']
 
 "" Custom keybindings
 inoremap jk <Esc>
