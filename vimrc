@@ -374,3 +374,7 @@ nnoremap <Leader>sp :OmniSharpStopServer<CR>
 
 " vimwiki encryption
 let g:GPGFilePattern = '*.\(gpg\|asc\|pgp\)\(.wiki\)\='
+
+" tmux
+nmap \r :!tmux send-keys -t left C-p C-m <CR><CR>
+
