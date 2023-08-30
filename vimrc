@@ -154,7 +154,7 @@ au BufRead,BufNewFile *.py set smartindent cinwords=if,elif,else,for,while,try,e
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e``
 
 " Expression register
-imap <C-i>u <C-r>=system(expand('~/vimconfig/scripts/insert_uuid.py'))<cr>
+imap <C-i>u <C-r>=system(expand('~/vimconfig/scripts/insert_uuid.rb'))<cr>
 
 " Git commit messages
 au FileType gitcommit setlocal spell tw=72
