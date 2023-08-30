@@ -33,7 +33,6 @@ set pastetoggle=<F5>
 set relativenumber
 set number
 
-
 "" Whitespace
 set wrap
 set tabstop=2 shiftwidth=2
