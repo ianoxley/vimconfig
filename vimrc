@@ -378,3 +378,6 @@ let g:GPGFilePattern = '*.\(gpg\|asc\|pgp\)\(.wiki\)\='
 " tmux
 nmap \r :!tmux send-keys -t left C-p C-m <CR><CR>
 
+" uuid macros
+" Convert 32 char to 36 char
+let @u='b8li-€ýa5li-€ýa5li-€ýa5li-€ý'
